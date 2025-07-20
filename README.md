@@ -1,20 +1,21 @@
-📅 Daily Auto-Commit Bot
-Automatiza tus contribuciones en GitHub con commits programados cada hora usando Python y GitHub Actions.
+# 🔄 Daily Auto-Commit Bot | GitHub Activity Automator  
 
-Este repositorio contiene un script en Python y una configuración de GitHub Actions para hacer commits automáticos periódicos, simulando actividad en tu perfil de GitHub.
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/tu-usuario/repo/auto_commit.yml?label=AutoCommits&style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-green?style=flat-square)
 
-🚀 Características
-✅ Commits automáticos cada hora (personalizable).
-✅ Fácil configuración (solo clona y activa GitHub Actions).
-✅ Funciona sin necesidad de tener tu PC encendida (usa servidores de GitHub).
-✅ Personalizable (puedes modificar la frecuencia y el mensaje de commit).
+**Automatiza tus contribuciones en GitHub con commits programados cada hora** usando Python + GitHub Actions. Perfecto para mantener tu perfil activo con commits consistentes.
 
+---
 
-❓ ¿Cómo funciona?
-El script (auto_commit.py) hace lo siguiente:
+## 🎯 Features
 
-Añade la fecha actual a un archivo commits.log.
+| Feature | Descripción |
+|---------|-------------|
+| ⏰ **Programable** | Configura commits cada hora, día o semana |
+| 🤖 **100% Automático** | No requiere intervención manual |
+| ☁️ **Serverless** | Funciona con GitHub Actions (sin PC encendida) |
+| 🔧 **Personalizable** | Edita mensajes, frecuencia y archivos modificados |
 
-Ejecuta los comandos Git (add, commit, push) para registrar el cambio.
+---
 
-GitHub Actions ejecuta este script automáticamente según el cronograma definido.
