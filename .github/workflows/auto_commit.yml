@@ -3,7 +3,7 @@ name: Auto Commit with Python
 on:
   schedule:
     - cron: '*/5 * * * *'  # Ejecuta cada 5 minutos
-  workflow_dispatch:       # Permite ejecución manual desde la interfaz
+  workflow_dispatch:       # Permite ejecución manual desde GitHub
 
 jobs:
   auto-commit:
@@ -18,9 +18,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Git (por si no está disponible)
-        run: sudo apt-get install git
-
-      - name: Run Python script
+      - name: Run Python auto commit script
         run: |
           python auto_commit.py
