@@ -2,7 +2,7 @@ import os
 import random
 from datetime import datetime
 
-# Lista de frases aleatorias
+# Lista de frases aleatorias para los mensajes de commit
 phrases = [
     "Keep going 💪",
     "Another step forward 🚀",
@@ -16,25 +16,27 @@ phrases = [
     "Commit como si nadie mirara 🎭"
 ]
 
-# Seleccionar una frase aleatoria
+# Elegir una frase aleatoria
 random_phrase = random.choice(phrases)
 
-# Configuración
+# Configuración del repo y archivo a modificar
 repo_path = "."
 file_name = "commits.log"
 
 # Cambiar al directorio del repositorio
 os.chdir(repo_path)
 
-# Agregar una línea al archivo (para forzar el cambio)
+# Escribir algo nuevo en el archivo para forzar cambios reales
 with open(file_name, "a") as f:
     f.write(f"{datetime.now()} - {random_phrase}\n")
 
-# Configurar Git
-os.system("git config --global user.name 'majopan'")
-os.system("git config --global user.email 'mariazzz2326@gmail.com'")
+# Configurar Git con tu nombre y correo
+os.system("git config user.name 'majopan'")
+os.system("git config user.email 'mariazzz2326@gmail.com'")
 
-# Agregar, commit y push (forzado con --allow-empty para que lo haga siempre)
+# Agregar cambios y hacer commit, incluso si no hay cambios (--allow-empty)
 os.system("git add .")
 os.system(f"git commit -m '{random_phrase}' --allow-empty")
+
+# Hacer push (GitHub Actions ya tiene permisos para esto)
 os.system("git push")
